@@ -1,0 +1,7 @@
+Dia 1:(2 horas) Revisión de tarea y especificaciones. Exploración de sitio web, identificación de objetivos. Preparación de herramientas.
+
+Dia 2:(3 horas) Pruebas con herramientas, elección según ventajas o desventajas. Pruebas sobre el sitio target. Creación de spider genérico de prueba, evaluación de resultados. Pruebas de busqueda manuales usando shell, evaluación de resultados.
+
+Dia 3:(4 horas) Se encontró una posible solución viable, pruebas en herramientas, elección nuevamente y planificación para comenzar con la codificación. Los resultados son los pedidos y la herramienta facilita cumplir con los items de configuración.
+
+Dia 4:(1 hora) Creación de repositorio, estructura de proyecto y documentación. Función para generar url de diferentes categorias.
