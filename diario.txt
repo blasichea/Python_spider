@@ -5,3 +5,9 @@ Dia 2:(3 horas) Pruebas con herramientas, elección según ventajas o desventaja
 Dia 3:(4 horas) Se encontró una posible solución viable, pruebas en herramientas, elección nuevamente y planificación para comenzar con la codificación. Los resultados son los pedidos y la herramienta facilita cumplir con los items de configuración.
 
 Dia 4:(1 hora) Creación de repositorio, estructura de proyecto y documentación. Función para generar url de diferentes categorias.
+
+dia 5:(3 horas) Se probó generar urls, se encontraron diferencias y se corrigio formato. Pruebo llevarlo a la estructura de Scrapy, no puedo adaptarlo
+
+dia 6:(3 horas) Se prueba de diferentes formas ingresar las rutas, no lo puedo adatar al funcionamiento de Scrapy. Investigué distintas opciones para recolectar las urls.
+
+dia 7:(4 horas) Logré adatar el parser. Falta modificar a la ruta de la API. Generé items para la recolección de los datos
