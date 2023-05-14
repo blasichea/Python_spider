@@ -21,14 +21,18 @@ class HiperSpider(scrapy.Spider):
 
 	def start_requests(self):
 		for url in self.start_urls:
-			yield scrapy.Request(url, callback=self.parse)
+			yield scrapy.Request(url, callback=self.parse_urls)
 
 	def get_urls(self, json_cat, lista):
+		path_api = '/api/catalog_system/pub/products/search'
+		arg_api = '?O=OrderByTopSaleDESC&_from=0&_to=23&ft'
+		arg_suc = '&sc=1'
 		for dic in json_cat:
 			if dic.get("hasChildren"):
 				self.get_urls(dic.get("children"), lista)
 			else:
-				lista.append(dic.get("url"))
+				url = dic.get("url")[:32] + path_api + dic.get("url")[32:] + arg_api + arg_suc
+				lista.append(url)
 
 	def parse_urls(self, response):
 		list_urls = []
@@ -39,3 +43,13 @@ class HiperSpider(scrapy.Spider):
 
 	def parse(self, response):
 		self.log(f'******* VISITE URL :::> {response.url}')
+		json_resp = json.loads(response.body)
+		#for prod in json_resp:
+		#Por ahora imprimo solo el primer producto
+		prod = json_resp[0]
+		precio_lista = prod["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"]
+		nombre_prod = prod["productName"]
+		sku = prod["productId"]
+		print("**** PRODUCTO ****\n", nombre_prod)
+		print("-Codigo: ", sku)
+		print("-Precio: ", precio_lista)
