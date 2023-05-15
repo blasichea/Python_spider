@@ -1,4 +1,6 @@
 from pathlib import Path
+from scrapy.loader import ItemLoader
+from hiper.items import HiperItem
 import json
 import scrapy
 
@@ -31,8 +33,10 @@ class HiperSpider(scrapy.Spider):
 			if dic.get("hasChildren"):
 				self.get_urls(dic.get("children"), lista)
 			else:
-				url = dic.get("url")[:32] + path_api + dic.get("url")[32:] + arg_api + arg_suc
-				lista.append(url)
+				url = dic.get("url").split('/')
+				url.insert(3, path_api)
+				url = '/'.join(url)
+				lista.append(url + arg_api + arg_suc)
 
 	def parse_urls(self, response):
 		list_urls = []
@@ -44,12 +48,18 @@ class HiperSpider(scrapy.Spider):
 	def parse(self, response):
 		self.log(f'******* VISITE URL :::> {response.url}')
 		json_resp = json.loads(response.body)
+		cargador = ItemLoader(item=HiperItem(), response=response)
 		#for prod in json_resp:
 		#Por ahora imprimo solo el primer producto
 		prod = json_resp[0]
-		precio_lista = prod["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"]
-		nombre_prod = prod["productName"]
-		sku = prod["productId"]
-		print("**** PRODUCTO ****\n", nombre_prod)
-		print("-Codigo: ", sku)
-		print("-Precio: ", precio_lista)
+		# precio_lista = prod["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"]
+		# nombre_prod = prod["productName"]
+		# sku = prod["productId"]
+		# print("**** PRODUCTO ****\n", nombre_prod)
+		# print("-Codigo: ", sku)
+		# print("-Precio: ", precio_lista)
+		
+		cargador.add_value("nombre", prod["productName"])
+		cargador.add_value("sku", prod["productId"])
+		cargador.add_value("precio_reg", prod["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"])
+		return cargador.load_item()
