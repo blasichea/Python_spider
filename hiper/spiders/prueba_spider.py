@@ -1,4 +1,3 @@
-from pathlib import Path
 from scrapy.loader import ItemLoader
 from hiper.items import HiperItem
 import json
@@ -9,12 +8,16 @@ class HiperSpider(scrapy.Spider):
 	name = "hiper"
 	
 
-	def __init__(self, proxy=None, *args, **kwargs):
+	def __init__(self, proxy=None, sucursal=1, *args, **kwargs):
 		super(HiperSpider, self).__init__(*args, **kwargs)
 		if proxy:
 			self.proxy = proxy
 		else:
 			self.proxy = None
+		if sucursal:
+			self.sucursal = sucursal
+		else:
+			self.sucursal = 1
 
 
 	allowed_domains = ["www.hiperlibertad.com.ar"]
@@ -29,7 +32,7 @@ class HiperSpider(scrapy.Spider):
 		if self.proxy:
 			yield scrapy.Request(
 				url,
-				meta={'proxy' : self.proxy},
+				meta={'proxy':self.proxy},
 				callback=self.parse_urls
 			)
 		else:
@@ -38,8 +41,8 @@ class HiperSpider(scrapy.Spider):
 
 	def get_urls(self, json_cat, lista):
 		path_api = "/api/catalog_system/pub/products/search"
-		arg_api = "?O=OrderByTopSaleDESC&_from=0&_to=23&ft"
-		arg_suc = "&sc=1"
+		arg_api = "?O=OrderByTopSaleDESC&_from=0&_to=30&ft"
+		arg_suc = f"&sc={self.sucursal}"
 		for dic in json_cat:
 			if dic.get("hasChildren"):
 				self.get_urls(dic.get("children"), lista)
@@ -58,7 +61,7 @@ class HiperSpider(scrapy.Spider):
 			if self.proxy:
 				yield scrapy.Request(
 					url,
-					meta={'proxy' : self.proxy},
+					meta={'proxy':self.proxy},
 					callback=self.parse_urls
 				)
 			else:
