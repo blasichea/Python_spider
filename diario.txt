@@ -6,8 +6,15 @@ Dia 3:(4 horas) Se encontró una posible solución viable, pruebas en herramient
 
 Dia 4:(1 hora) Creación de repositorio, estructura de proyecto y documentación. Función para generar url de diferentes categorias.
 
-dia 5:(3 horas) Se probó generar urls, se encontraron diferencias y se corrigio formato. Pruebo llevarlo a la estructura de Scrapy, no puedo adaptarlo
+Dia 5:(3 horas) Se probó generar urls, se encontraron diferencias y se corrigio formato. Pruebo llevarlo a la estructura de Scrapy, no puedo adaptarlo
 
-dia 6:(3 horas) Se prueba de diferentes formas ingresar las rutas, no lo puedo adatar al funcionamiento de Scrapy. Investigué distintas opciones para recolectar las urls.
+Dia 6:(3 horas) Se prueba de diferentes formas ingresar las rutas, no lo puedo adatar al funcionamiento de Scrapy. Investigué distintas opciones para recolectar las urls.
 
-dia 7:(4 horas) Logré adatar el parser. Falta modificar a la ruta de la API. Generé items para la recolección de los datos
+Dia 7:(4 horas) Logré adatar el parser. Falta modificar a la ruta de la API. Generé items para la recolección de los datos.
+
+Dia 8:(2 horas) Modifiqué urls con ruta de API. Prueba de recolección de datos.
+
+Dia 9:(2 horas) Implementé cargador de items. Realizo prueba cargando datos en un .CSV (scrapy crawl hiper -O items.csv). Cambie el procedimiento para agregar ruta API.
+
+Dia 10: (2 horas) Agrego alternativa de configuración de proxy. Se ven opciones de multi thread en descargas y en items
+
