@@ -16,5 +16,10 @@ Dia 8:(2 horas) Modifiqué urls con ruta de API. Prueba de recolección de datos
 
 Dia 9:(2 horas) Implementé cargador de items. Realizo prueba cargando datos en un .CSV (scrapy crawl hiper -O items.csv). Cambie el procedimiento para agregar ruta API.
 
-Dia 10: (2 horas) Agrego alternativa de configuración de proxy. Se ven opciones de multi thread en descargas y en items
+Dia 10:(2 horas) Agrego alternativa de configuración de proxy. Se ven opciones de multi thread en descargas y en items
 
+Dia 11:(2 horas) Descripción en README, agrego todos los datos para completar los items, stock, url, categoria, sku, descripcion. Comento "descripcion" para ver mejor los datos, las descripciones son muy largas.
+
+Dia 12:(2 horas) Función "myRequest" para reutilizar con la opción de proxy. Función "pagination" para hacer paginación en la API.
+
+Dia 13:(2 horas) Prueba de recolección completa en sucursal 1, se recolectaron 9600 items. En sucursal 2, se recolectaron 9400 items
