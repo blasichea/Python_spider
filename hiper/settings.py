@@ -91,3 +91,7 @@ DOWNLOADER_MIDDLEWARES = {
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+FEEDS = {'sucursal.csv': {'format': 'csv', 'overwrite': True}}
+
+# Maximum number of times to retry
+RETRY_TIMES = 2
