@@ -18,19 +18,22 @@ Ejecuto el proyecto con:
 
 Se pueden agregar configuraciones mediante argumentos:
 
-- Configurar multiples hilos para peticiones (default=16)
+- Configurar multiples hilos para peticiones (default: 16)
 >scrapy crawl hiper -s CONCURRENT_REQUESTS=300
 
-- Configurar multiples hilos para items (default=100)
+- Configurar multiples hilos para items (default: 100)
 >scrapy crawl hiper -s CONCURRENT_ITEMS=100
+
+- Configurar cantidad de reintentos (default: 2)
+>scrapy crawl hiper -s RETRY_TIMES=5
 
 - Configurar proxy
 >scrapy crawl hiper -a proxy="proxy.com"
 
-- Configurar numero de sucursal
+- Configurar numero de sucursal (default: 1)
 >scrapy crawl hiper -a sucursal=1
 
-- Configurar nombre de archivo de salida
+- Configurar nombre de archivo de salida (default: sucursal.csv)
 >scrapy crawl hiper -o archivo.csv
 >scrapy crawl hiper -o archivo -t csv
 >scrapy crawl hiper -O archivo.csv
