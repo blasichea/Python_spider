@@ -1,25 +1,49 @@
-Dia 1:(2 horas) Revisión de tarea y especificaciones. Exploración de sitio web, identificación de objetivos. Preparación de herramientas.
+Dia 1:(2 horas) Revisión de tarea y especificaciones. Exploración de sitio web,
+	identificación de objetivos. Preparación de herramientas.
 
-Dia 2:(3 horas) Pruebas con herramientas, elección según ventajas o desventajas. Pruebas sobre el sitio target. Creación de spider genérico de prueba, evaluación de resultados. Pruebas de busqueda manuales usando shell, evaluación de resultados.
+Dia 2:(3 horas) Pruebas con herramientas, elección según ventajas o desventajas.
+	Pruebas sobre el sitio target. Creación de spider genérico de prueba,
+	evaluación de resultados. Pruebas de busqueda manuales usando shell,
+	evaluación de resultados.
 
-Dia 3:(4 horas) Se encontró una posible solución viable, pruebas en herramientas, elección nuevamente y planificación para comenzar con la codificación. Los resultados son los pedidos y la herramienta facilita cumplir con los items de configuración.
+Dia 3:(4 horas) Se encontró una posible solución viable, pruebas en herramientas,
+	elección nuevamente y planificación para comenzar con la codificación.
+	Los resultados son los pedidos y la herramienta facilita cumplir con los items de
+	configuración.
 
-Dia 4:(1 hora) Creación de repositorio, estructura de proyecto y documentación. Función para generar url de diferentes categorias.
+Dia 4:(1 hora) Creación de repositorio, estructura de proyecto y documentación.
+	Función para generar url de diferentes categorias.
 
-Dia 5:(3 horas) Se probó generar urls, se encontraron diferencias y se corrigio formato. Pruebo llevarlo a la estructura de Scrapy, no puedo adaptarlo
+Dia 5:(3 horas) Se probó generar urls, se encontraron diferencias y se corrigio formato.
+	Pruebo llevarlo a la estructura de Scrapy, no puedo adaptarlo.
 
-Dia 6:(3 horas) Se prueba de diferentes formas ingresar las rutas, no lo puedo adatar al funcionamiento de Scrapy. Investigué distintas opciones para recolectar las urls.
+Dia 6:(3 horas) Se prueba de diferentes formas ingresar las rutas,
+	no lo puedo adaptar al funcionamiento de Scrapy.
+	Investigué distintas opciones para recolectar las urls.
 
-Dia 7:(4 horas) Logré adatar el parser. Falta modificar a la ruta de la API. Generé items para la recolección de los datos.
+Dia 7:(4 horas) Logré adatar el parser. Falta modificar a la ruta de la API.
+	Generé items para la recolección de los datos.
 
-Dia 8:(2 horas) Modifiqué urls con ruta de API. Prueba de recolección de datos.
+Dia 8:(2 horas) Modifiqué urls con ruta de API.
+	Prueba de recolección de datos.
 
-Dia 9:(2 horas) Implementé cargador de items. Realizo prueba cargando datos en un .CSV (scrapy crawl hiper -O items.csv). Cambie el procedimiento para agregar ruta API.
+Dia 9:(2 horas) Implementé cargador de items.
+	Realizo prueba cargando datos en un .CSV (scrapy crawl hiper -O items.csv).
+	Cambie el procedimiento para agregar ruta API.
 
-Dia 10:(2 horas) Agrego alternativa de configuración de proxy. Se ven opciones de multi thread en descargas y en items
+Dia 10:(2 horas) Agrego alternativa de configuración de proxy.
+	Se ven opciones de multi thread en descargas y en items
 
-Dia 11:(2 horas) Descripción en README, agrego todos los datos para completar los items, stock, url, categoria, sku, descripcion. Comento "descripcion" para ver mejor los datos, las descripciones son muy largas.
+Dia 11:(2 horas) Descripción en README, agrego todos los datos para completar los items,
+	stock, url, categoria, sku, descripcion.
+	Comento "descripcion" para ver mejor los datos, las descripciones son muy largas.
 
-Dia 12:(2 horas) Función "myRequest" para reutilizar con la opción de proxy. Función "pagination" para hacer paginación en la API.
+Dia 12:(2 horas) Función "myRequest" para reutilizar con la opción de proxy.
+Función "pagination" para hacer paginación en la API.
 
-Dia 13:(2 horas) Prueba de recolección completa en sucursal 1, se recolectaron 9600 items. En sucursal 2, se recolectaron 9400 items
+Dia 13:(2 horas) Prueba de recolección completa en sucursal 1,
+	se recolectaron 9600 items.
+	En sucursal 2, se recolectaron 9400 items
+
+Dia 14:(1 hora) Set de nombre por defecto de archivo de salida.
+	Variable RETRY_TIMES para configurar cantidad de reintentos
